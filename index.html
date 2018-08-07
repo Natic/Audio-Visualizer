@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Audio</title>
-    <link rel="stylesheet" href="main.css">
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src='main.js'></script>
-  </head>
-  <body onload="file()">
-    <a-scene>
+<html>
+    <head>
+        <link href="http://code.divshot.com/geo-bootstrap/swatch/bootstrap.min.css" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+        <title>WebVR Realtime Weather</title>
 
-      <a-sound cross-origin='true' src='src: url(audio/mrroboto.mp3)' id='audio' position='0 0 -10' autoplay='true' loop='true'></a-sound>
+    </head>
+    <body>
 
-        <a-entity position='0 -50 -400' rotation='0 90 0' fractal='audioSource: #audio; colors: #4286f4, #cbff00, #b800c9, #00c9a4, #ff002e; scale: 0.1; pointSize: 5; points: 3000 x: prev.x + ((512 * ( prev.y - prev.x )) * 0.0001); y: prev.y + ((prev.x * ( 3072 - prev.z ) - prev.y) * 0.0001); z: prev.z + ((prev.x * prev.y - 128 * prev.z) * 0.0001);'>
-
-          <a-animation attribute="rotation"
-             dur="100000"
-             easing='linear'
-             from='0 90 0'
-             to="0 450 0"
-             repeat="indefinite">
-          </a-animation>
-
-        </a-entity>
-
-      <a-sky color='#000000'></a-sky>
-
-    <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
-
-    </a-scene>
-
-    <a href='https://www.youtube.com/watch?v=uc6f_2nPSX8' target='_blank' class='songtitle'>
-<h1>Mr. Roboto</h1>
-  <!--  <input type="file" id="myFile" multiple size="50" onchange="file()" class="input">-->
-
-
-  </body>
+            <h1>
+            Different Songs
+            </h1>
+            <br>
+            <a href="mrroboto.html" class="btn btn-primary">Mr. Roboto</a>
+            <br>
+            <br>
+            <a href="sad.html" class="btn btn-primary">SAD!</a>
+            <br>
+            <br>
+            <a href="flamingo.html" class="btn btn-primary">Flamingo</a>
+    </body>
 </html>

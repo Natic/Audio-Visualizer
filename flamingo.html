@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Audio</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src='main.js'></script>
+  </head>
+  <body onload="file()">
+    <a-scene>
+
+      <a-sound cross-origin='true' src='src: url(audio/flamingo.mp3)' id='audio' position='0 0 -10' autoplay='true' loop='true'></a-sound>
+
+        <a-entity position='0 -50 -400' rotation='0 90 0' fractal='audioSource: #audio; colors: #4286f4, #cbff00, #b800c9, #00c9a4, #ff002e; scale: 0.1; pointSize: 5; points: 3000 x: prev.x + ((512 * ( prev.y - prev.x )) * 0.0001); y: prev.y + ((prev.x * ( 3072 - prev.z ) - prev.y) * 0.0001); z: prev.z + ((prev.x * prev.y - 128 * prev.z) * 0.0001);'>
+
+          <a-animation attribute="rotation"
+             dur="100000"
+             easing='linear'
+             from='0 90 0'
+             to="0 450 0"
+             repeat="indefinite">
+          </a-animation>
+
+        </a-entity>
+
+      <a-sky color='#000000'></a-sky>
+
+    <a-camera look-controls-enabled="false" wasd-controls-enabled="false"></a-camera>
+
+    </a-scene>
+
+
+
+<a href='index.html' class='songtitle'>
+<h1>More Songs</h1>
+</a>
+
+
+
+  </body>
+</html>
